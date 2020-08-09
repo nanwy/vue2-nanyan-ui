@@ -1,0 +1,58 @@
+{
+  "id": "1981480",
+  "name": "nan-",
+  "font_family": "iconfont",
+  "css_prefix_text": "nan-icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "16418075",
+      "name": "loading",
+      "font_class": "loading",
+      "unicode": "e61a",
+      "unicode_decimal": 58906
+    },
+    {
+      "icon_id": "16284457",
+      "name": "download2",
+      "font_class": "xiazai2",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "16284458",
+      "name": "upload2",
+      "font_class": "shangchuan2",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "16418076",
+      "name": "download",
+      "font_class": "download-copy",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "16418078",
+      "name": "upload",
+      "font_class": "upload-copy",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "16284427",
+      "name": "left",
+      "font_class": "left",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "16284428",
+      "name": "right",
+      "font_class": "right",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    }
+  ]
+}

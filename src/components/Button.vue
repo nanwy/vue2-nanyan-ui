@@ -1,28 +1,31 @@
 <template>
-  <div>
-    <button
-      class="btn"
-      :class="[size? `btn-${size}`:'',outlineClass? `btn-${outlineClass}-${type}`:`btn-${type}`,{
+  <button
+    class="nan-btn"
+    :class="[size? `btn-${size}`:'',outlineClass? `btn-${outlineClass}-${type}`:`btn-${type}`,{
         'is-round':round,
-        'is-circle':circle
+        'is-circle':circle,
       }]"
-    >
-      <i :class="icon" v-if="icon && !loading"></i>
-      <span v-if="$slots.default">
-        <slot></slot>
-      </span>
-    </button>
-  </div>
+    :autofocus="autofocus"
+    :disabled="buttonDisabled || loading"
+  >
+    <i class="nan-icon-loading" v-if="loading"></i>
+    <i :class="icon" v-if="icon && !loading"></i>
+    <span v-if="$slots.default">
+      <slot></slot>
+    </span>
+  </button>
 </template>
 
 <script>
 export default {
+  name: "NANButton",
   props: {
     icon: {
       type: String,
       default: "",
     },
     loading: Boolean,
+    autofocus: Boolean,
     type: {
       type: String,
       default: "primary",
@@ -41,6 +44,7 @@ export default {
         );
       },
     },
+    disabled: Boolean,
     size: {
       type: String,
       defult: "small",
@@ -59,15 +63,18 @@ export default {
     btnSize() {
       return this.size;
     },
+    buttonDisabled() {
+      return this.disabled;
+    },
   },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/scss/button";
+// @import "../assets/scss/button";
 .btn {
   // font-size: $font-size;
   // height: $button-height;
-  vertical-align: middle;
+  // vertical-align: middle;
 }
 </style>
