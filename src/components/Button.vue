@@ -26,6 +26,20 @@ export default {
     type: {
       type: String,
       default: "primary",
+      validator(val) {
+        return (
+          [
+            "dark",
+            "secondary",
+            "info",
+            "primary",
+            "light",
+            "success",
+            "danger",
+            "warning",
+          ].indexOf(val) !== -1
+        );
+      },
     },
     size: {
       type: String,
@@ -50,7 +64,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/button";
+@import "../assets/scss/button";
 .btn {
   // font-size: $font-size;
   // height: $button-height;
